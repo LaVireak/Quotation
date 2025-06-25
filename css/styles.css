@@ -1,0 +1,411 @@
+/* Modern Gray Aesthetic Quotation Styles */
+:root {
+    --primary-color: #6b7280;
+    --secondary-color: #4b5563;
+    --accent-color: #9ca3af;
+    --danger-color: #ef4444;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --light-bg: #f9fafb;
+    --card-bg: #ffffff;
+    --border-bg: #f3f4f6;
+    --text-primary: #111827;
+    --text-secondary: #6b7280;
+    --border-color: #e5e7eb;
+    --gradient-bg: linear-gradient(135deg, #6b7280 0%, #4b5563 50%, #374151 100%);
+    --gradient-light: linear-gradient(135deg, rgba(107, 114, 128, 0.1) 0%, rgba(75, 85, 99, 0.1) 50%, rgba(55, 65, 81, 0.1) 100%);
+    --shadow-light: 0 4px 6px -1px rgba(107, 114, 128, 0.1), 0 2px 4px -1px rgba(75, 85, 99, 0.06);
+    --shadow-medium: 0 10px 15px -3px rgba(107, 114, 128, 0.1), 0 4px 6px -2px rgba(75, 85, 99, 0.05);
+    --shadow-large: 0 20px 25px -5px rgba(107, 114, 128, 0.1), 0 10px 10px -5px rgba(75, 85, 99, 0.04);
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #f9fafb 0%, #e5e7eb 50%, #f3f4f6 100%);
+    color: var(--text-primary);
+    min-height: 100vh;
+}
+
+.container-fluid {
+    background: transparent !important;
+}
+
+/* Company Info Styling */
+.company-name {
+    font-weight: 800;
+    letter-spacing: 1px;
+    background: var(--gradient-bg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 2px 2px 4px rgba(107, 114, 128, 0.1);
+}
+
+.address-info p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Quotation Header */
+.quotation-header .display-4 {
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.quotation-header h2 {
+    background: var(--gradient-bg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 2px 2px 4px rgba(107, 114, 128, 0.1);
+}
+
+.company-logo img {
+    border: 4px solid var(--accent-color);
+    box-shadow: var(--shadow-medium);
+    transition: all 0.3s ease;
+}
+
+.company-logo img:hover {
+    box-shadow: var(--shadow-large);
+    transform: translateY(-2px);
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 20px;
+    background: var(--card-bg);
+    box-shadow: var(--shadow-light);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(107, 114, 128, 0.1);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-4px);
+    border-color: rgba(107, 114, 128, 0.2);
+}
+
+.card-body {
+    color: var(--text-primary);
+}
+
+/* Table Styling */
+.table {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-light);
+    background: var(--card-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.table-primary {
+    background: var(--gradient-bg) !important;
+    color: white;
+}
+
+.table-primary th {
+    border-color: rgba(255,255,255,0.2);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 1.2rem;
+}
+
+.table-hover tbody tr:hover {
+    background: var(--gradient-light) !important;
+    transform: scale(1.001);
+    transition: all 0.2s ease;
+}
+
+.table td, .table th {
+    border-color: var(--border-color);
+    padding: 1.2rem;
+}
+
+/* Data rows */
+.data-row {
+    background-color: var(--card-bg);
+    transition: all 0.2s ease;
+}
+
+.data-row:hover {
+    background: var(--gradient-light) !important;
+    box-shadow: 0 2px 8px rgba(107, 114, 128, 0.1);
+}
+
+.data .btn {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.data-row:hover .data .btn {
+    opacity: 1;
+}
+
+/* Footer totals */
+#sub-total {
+    border-top: 3px solid var(--primary-color) !important;
+    background: var(--gradient-light) !important;
+}
+
+.table-light {
+    background: var(--gradient-light) !important;
+}
+
+/* Modal Styling */
+.modal-content {
+    border-radius: 24px;
+    border: none;
+    box-shadow: var(--shadow-large);
+    background: var(--card-bg);
+    color: var(--text-primary);
+    backdrop-filter: blur(20px);
+}
+
+.modal-header {
+    border-radius: 24px 24px 0 0;
+    border-bottom: 1px solid var(--border-color);
+    padding: 2rem;
+    background: var(--gradient-bg);
+    color: white;
+}
+
+.modal-body {
+    padding: 2.5rem;
+    background: var(--card-bg);
+}
+
+.modal-footer {
+    border-top: 1px solid var(--border-color);
+    border-radius: 0 0 24px 24px;
+    padding: 2rem;
+    background: var(--light-bg);
+}
+
+/* Form Controls */
+.form-control {
+    border-radius: 12px;
+    border: 2px solid var(--border-color);
+    padding: 1rem 1.25rem;
+    background: var(--light-bg);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(107, 114, 128, 0.15);
+    background: var(--card-bg);
+    transform: translateY(-1px);
+}
+
+.form-control::placeholder {
+    color: var(--text-secondary);
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 0.75rem 2rem;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--gradient-bg);
+    border: none;
+    box-shadow: var(--shadow-light);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #5a6378, #3f4551, #2d3748);
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: var(--border-bg);
+    border: 2px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+    background: var(--border-color);
+    border-color: var(--text-secondary);
+    color: var(--text-primary);
+    transform: translateY(-1px);
+}
+
+.btn-outline-danger {
+    border: 2px solid var(--danger-color);
+    color: var(--danger-color);
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-danger:hover {
+    background: var(--danger-color);
+    color: white;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+    transform: translateY(-1px);
+}
+
+/* Alert Styling */
+.alert-primary {
+    background: var(--gradient-light);
+    border: 2px solid rgba(107, 114, 128, 0.2);
+    border-radius: 16px;
+    color: var(--text-primary);
+    backdrop-filter: blur(10px);
+}
+
+/* Footer */
+footer {
+    background: var(--gradient-bg) !important;
+    box-shadow: 0 -4px 6px -1px rgba(107, 114, 128, 0.1);
+}
+
+/* Custom styles for specific elements */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary {
+    background: var(--gradient-bg) !important;
+}
+
+.bg-primary.bg-opacity-10 {
+    background: var(--gradient-light) !important;
+    border: 2px solid rgba(107, 114, 128, 0.15) !important;
+    backdrop-filter: blur(10px);
+}
+
+/* Icon styling */
+.fas, .fa {
+    filter: drop-shadow(0 1px 2px rgba(107, 114, 128, 0.1));
+}
+
+/* Customer info boxes */
+.customer-info, .shipping-info {
+    background: var(--gradient-light) !important;
+    border-left: 4px solid var(--primary-color) !important;
+    box-shadow: var(--shadow-light);
+    transition: all 0.3s ease;
+}
+
+.shipping-info {
+    border-left: 4px solid var(--secondary-color) !important;
+}
+
+.customer-info:hover, .shipping-info:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Quotation details box */
+.quotation-details .bg-primary {
+    background: var(--gradient-light) !important;
+    border: 2px solid rgba(107, 114, 128, 0.2) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-light);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2rem !important;
+    }
+    
+    .company-logo img {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    
+    .modal-dialog {
+        margin: 1rem;
+    }
+    
+    .table-responsive {
+        font-size: 0.875rem;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    .btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    .btn, .modal {
+        display: none !important;
+    }
+    
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        background: white !important;
+        color: black !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .table {
+        background: white !important;
+        color: black !important;
+    }
+}
+
+/* Additional aesthetic enhancements */
+.card-title {
+    background: var(--gradient-bg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading animation for dynamic content */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.data-row {
+    animation: fadeInUp 0.5s ease forwards;
+}

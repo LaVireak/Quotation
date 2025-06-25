@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Studio Plus - Professional Quotation System</title>
+    <meta name="description" content="Modern vibrant-themed professional creative studio quotation system">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Main Container -->
+    <div class="container-fluid min-vh-100">
+        <div class="container py-5">
+            <!-- Header Section -->
+            <div class="card shadow-lg mb-5">
+                <div class="card-body p-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-12">
+                            <div class="row align-items-center">
+                                <div class="col-md-8">
+                                    <div class="company-info">
+                                        <h1 class="company-name mb-4">
+                                            <i class="fas fa-palette me-3"></i>CREATIVE STUDIO PLUS
+                                        </h1>
+                                        <div class="address-info">
+                                            <p class="mb-2"><i class="fas fa-map-marker-alt me-3 text-secondary"></i>Sukhumvit Creative District</p>
+                                            <p class="mb-2">Bangkok, Thailand 10110</p>
+                                            <p class="mb-2"><i class="fas fa-phone me-3 text-secondary"></i>+66 (0) 2-555-0123</p>
+                                            <p class="mb-0"><i class="fas fa-envelope me-3 text-secondary"></i>hello@creativestudioplus.co.th</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 text-end">
+                                    <div class="quotation-header">
+                                        <h2 class="text-primary fw-bold mb-4">
+                                            <i class="fas fa-file-invoice-dollar me-2"></i>QUOTATION
+                                        </h2>
+                                        <div class="company-logo">
+                                            <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=200&h=200&fit=crop&crop=center" 
+                                                 alt="Creative Studio Plus Logo" class="img-fluid rounded-circle shadow-lg" 
+                                                 style="width: 100px; height: 100px; object-fit: cover;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customer Information Section -->
+            <div class="card shadow-lg mb-5">
+                <div class="card-body p-4">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <h5 class="text-primary mb-3"><i class="fas fa-building me-2"></i>From:</h5>
+                            <div class="customer-info p-3 rounded" style="background: var(--border-bg); border-left: 4px solid var(--primary-color);">
+                                <strong>Creative Studio Plus</strong><br>
+                                123 Sukhumvit Road<br>
+                                Asok, Watthana District<br>
+                                Bangkok, Thailand 10110
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <h5 class="text-primary mb-3"><i class="fas fa-user me-2"></i>Bill To:</h5>
+                            <div class="shipping-info p-3 rounded" style="background: var(--border-bg); border-left: 4px solid var(--secondary-color);">
+                                <strong>Thai Innovation Co., Ltd.</strong><br>
+                                456 Silom Road<br>
+                                Bang Rak District<br>
+                                Bangkok, Thailand 10500
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-4">
+                            <div class="quotation-details">
+                                <div class="bg-primary bg-opacity-10 p-4 rounded-3 border text-center">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h6 class="text-primary mb-3"><i class="fas fa-calendar-alt me-2"></i>Quotation Date:</h6>
+                                            <p class="fw-bold mb-3 fs-6" id="quotationDate">2010/7/27</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h6 class="text-primary mb-3"><i class="fas fa-hashtag me-2"></i>Quote #:</h6>
+                                            <p class="fw-bold mb-0 fs-6" id="quotationNumber">QT-001</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add Item Button -->
+            <div class="mb-5 text-center">
+                <button type="button" class="btn btn-primary btn-lg px-5 py-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i class="fas fa-plus-circle me-3"></i>Add New Item
+                </button>
+            </div>
+
+            <!-- Items Table -->
+            <div class="card shadow-lg mb-5">
+                <div class="card-body p-4">
+                    <h4 class="card-title text-primary mb-4">
+                        <i class="fas fa-list-ul me-3"></i>Quotation Items
+                    </h4>
+                    <div class="table-responsive">
+                        <table class="table table-hover" id="quotationTable">
+                            <thead class="table-primary">
+                                <tr>
+                                    <th width="10%" class="text-center">QTY</th>
+                                    <th width="50%">DESCRIPTION</th>
+                                    <th width="20%" class="text-end">UNIT PRICE</th>
+                                    <th width="20%" class="text-end">AMOUNT</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Dynamic content will be inserted here -->
+                            </tbody>
+                            <tfoot class="table-light">
+                                <tr id="sub-total">
+                                    <td colspan="3" class="text-end fw-bold fs-6">Subtotal:</td>
+                                    <td class="text-end fw-bold fs-6" id="subTotal">---</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="text-end">VAT (7%):</td>
+                                    <td class="text-end" id="vat">--</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="text-end">Shipping & Handling:</td>
+                                    <td class="text-end" id="bottom-line">฿0.00</td>
+                                </tr>
+                                <tr class="table-primary">
+                                    <td colspan="3" class="text-end fw-bold fs-4">TOTAL DUE:</td>
+                                    <td class="text-end fw-bold fs-4" id="total">--</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Terms and Conditions -->
+            <div class="card shadow-lg mb-5">
+                <div class="card-body text-center p-5">
+                    <h5 class="text-primary mb-4">
+                        <i class="fas fa-credit-card me-2"></i>Payment Information
+                    </h5>
+                    <p class="mb-3 fs-6"><strong>Make all checks payable to:</strong></p>
+                    <p class="mb-4 fs-5 text-primary"><em><strong>CREATIVE STUDIO PLUS</strong></em></p>
+                    <p class="mb-4 fs-6"><strong>Questions? Call us at: +66 (0) 2-555-0123</strong></p>
+                    <div class="alert alert-primary d-inline-block py-3 px-5">
+                        <h6 class="mb-0">
+                            <i class="fas fa-paint-brush me-3"></i>
+                            <strong>THANK YOU FOR CHOOSING CREATIVE STUDIO PLUS</strong>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-4 mt-auto">
+        <div class="container">
+            <p class="mb-0 fs-6">
+                <i class="fas fa-copyright me-2"></i>
+                2025 Creative Studio Plus - Leading Creative Solutions in Thailand
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">
+                        <i class="fas fa-plus-circle me-3"></i>Add New Item
+                    </h3>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="itemForm">
+                        <div class="row">
+                            <div class="col-md-12 mb-4">
+                                <label for="newItemDescription" class="form-label">
+                                    <i class="fas fa-align-left me-2"></i>Item Description
+                                </label>
+                                <input type="text" class="form-control" id="newItemDescription" 
+                                       placeholder="Enter detailed item description" required>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label for="newItemPPU" class="form-label">
+                                    <i class="fas fa-dollar-sign me-2"></i>Price Per Unit (฿)
+                                </label>
+                                <input type="number" class="form-control" id="newItemPPU" 
+                                       min="0" step="0.01" placeholder="0.00" required>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label for="newItemQty" class="form-label">
+                                    <i class="fas fa-sort-numeric-up me-2"></i>Quantity
+                                </label>
+                                <input type="number" class="form-control" id="newItemQty" 
+                                       min="0" step="0.01" placeholder="1" required>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        <i class="fas fa-times me-2"></i>Cancel
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="addItem()">
+                        <i class="fas fa-save me-2"></i>Save Item
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        var quotationData = []
+
+        function addItem() {
+            var description = $("#newItemDescription").val().trim()
+            var unitPrice = $("#newItemPPU").val()
+            var quantity = $("#newItemQty").val()
+            
+            // Validation
+            if (!description || !unitPrice || !quantity) {
+                alert('Please fill in all fields')
+                return
+            }
+            
+            console.debug(description, unitPrice, quantity)
+            quotationData.push({
+                description: description,
+                quantity: Number.parseFloat(quantity),
+                unitPrice: Number.parseFloat(unitPrice)
+            })
+            
+            // Clear form
+            $("#itemForm")[0].reset()
+            
+            // Close modal
+            var modal = bootstrap.Modal.getInstance(document.getElementById('exampleModal'))
+            modal.hide()
+            
+            renderTable()
+        }
+
+        function renderTable() {
+            var data = quotationData
+            var subTotal = 0
+            
+            data.forEach((e) => {
+                subTotal = subTotal + (e.unitPrice * e.quantity)
+            })
+            
+            var vat = (subTotal * 0.07).toFixed(2)
+            var total = (subTotal * 1.07).toFixed(2)
+
+            console.log('subTotal', subTotal)
+            $("#subTotal").html("฿" + subTotal.toFixed(2))
+            $("#vat").html("฿" + vat)
+            $("#total").html("฿" + total)
+
+            var dataRows = data.map((e, i) => {
+                let amount = e.quantity * e.unitPrice
+                return `<tr class="data-row">
+                    <td class="text-center">${e.quantity}</td>
+                    <td class="data">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span>${e.description}</span>
+                            <button class="btn btn-sm btn-outline-danger" onclick="deleteItem(${i})" title="Delete item">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </td>
+                    <td class="text-end">฿${e.unitPrice.toFixed(2)}</td>
+                    <td class="text-end">฿${amount.toFixed(2)}</td>
+                </tr>`
+            })
+
+            $(".data-row").remove()
+
+            // Insert into the table
+            dataRows.forEach((r) => {
+                $('#quotationTable tbody').append(r)
+            })
+        }
+
+        function deleteItem(i) {
+            if (confirm('Are you sure you want to delete this item?')) {
+                quotationData.splice(i, 1)
+                renderTable()
+            }
+        }
+
+        function generateQuotationNumber() {
+            var date = new Date()
+            var year = date.getFullYear()
+            var month = String(date.getMonth() + 1).padStart(2, '0')
+            var day = String(date.getDate()).padStart(2, '0')
+            var random = Math.floor(Math.random() * 1000).toString().padStart(3, '0')
+            return `QT-${year}${month}${day}-${random}`
+        }
+
+        $(document).ready(function () {
+            // Set current date
+            var currentDate = new Date()
+            $('#quotationDate').html(currentDate.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            }))
+            
+            // Generate quotation number
+            $('#quotationNumber').html(generateQuotationNumber())
+            
+            // Load data from JSON file
+            $.getJSON('data/data.json')
+                .done(data => {
+                    quotationData = data
+                    renderTable()
+                })
+                .fail(() => {
+                    console.log('Could not load data.json, starting with empty quotation')
+                })
+        })
+    </script>
+</body>
+
+</html>

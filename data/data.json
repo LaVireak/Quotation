@@ -1,0 +1,32 @@
+[
+  {
+      "quantity": 1,
+      "description": "Brand Identity Design Package - Logo, Business Cards, Letterhead",
+      "unitPrice": 2500.00
+  },
+  {
+      "quantity": 1,
+      "description": "Website Design & Development - Responsive, Modern Layout",
+      "unitPrice": 4500.00
+  },
+  {
+      "quantity": 5,
+      "description": "Social Media Graphics Set - Instagram, Facebook, Twitter",
+      "unitPrice": 350.00
+  },
+  {
+      "quantity": 1,
+      "description": "Product Photography Session - 20 High-Quality Images",
+      "unitPrice": 1200.00
+  },
+  {
+      "quantity": 3,
+      "description": "Marketing Brochure Design - Tri-fold, Professional Print",
+      "unitPrice": 650.00
+  },
+  {
+      "quantity": 1,
+      "description": "Video Production - 60 Second Promotional Video",
+      "unitPrice": 3500.00
+  }
+]
